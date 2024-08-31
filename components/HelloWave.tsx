@@ -6,11 +6,12 @@ import Animated, {
   withRepeat,
   withSequence,
 } from 'react-native-reanimated';
-
 import { ThemedText } from '@/components/ThemedText';
+import { Text, View } from 'react-native';
+
 
 export function HelloWave() {
-  const rotationAnimation = useSharedValue(0);
+  const rotationAnimation = useSharedValue(10);
 
   rotationAnimation.value = withRepeat(
     withSequence(withTiming(25, { duration: 150 }), withTiming(0, { duration: 150 })),
@@ -22,9 +23,12 @@ export function HelloWave() {
   }));
 
   return (
-    <Animated.View style={animatedStyle}>
-      <ThemedText style={styles.text}>👋</ThemedText>
-    </Animated.View>
+    
+      <View className ="flex-1  bg-black">
+        <Text className="text-white">
+      Hello
+      </Text>
+    </View>
   );
 }
 
