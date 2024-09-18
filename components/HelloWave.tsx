@@ -24,7 +24,7 @@ export function HelloWave() {
 
   return (
     
-      <View className ="flex-1  bg-black">
+      <View className ="flex-1 bg-black">
         <Text className="text-white">
       Hello
       </Text>
